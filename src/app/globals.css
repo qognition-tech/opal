@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --radius: 0.75rem;
+
+    --primary-50: oklch(0.9728 0.0057 264.53); /* f4f6fa */
+    --primary-100: oklch(0.9366 0.0129 266.7); /* e6eaf3 */
+    --primary-200: oklch(0.8874 0.0249 265.58); /* d2daeb */
+    --primary-300: oklch(0.8117 0.0398 262.9); /* b4c2dc */
+    --primary-400: oklch(0.7143 0.0629 264.06); /* 8fa3cb */
+    --primary-500: oklch(0.6299 0.0847 269.01); /* 7487bd */
+    --primary-600: oklch(0.5628 0.0964 272.47); /* 6271ae */
+    --primary-700: oklch(0.505 0.0976 275.29); /* 555f9c */
+    --primary-800: oklch(0.4521 0.0803 277.36); /* 4b5182 */
+    --primary-900: oklch(0.4014 0.0612 276.05); /* 3f4569 */
+    --primary-950: oklch(0.301 0.038 279.64); /* 2a2c41 */
+
+    --accent-50: oklch(0.9905 0.0249 101.95); /* fffdea */
+    --accent-100: oklch(0.9761 0.0681 103.09); /* fffac5 */
+    --accent-200: oklch(0.9575 0.1342 104.55); /* fff686 */
+    --accent-300: oklch(0.9311 0.1754 102.59); /* ffec46 */
+    --accent-400: oklch(0.8971 0.1808 97.09); /* ffdc1c */
+    --accent-500: oklch(0.8414 0.1704 84.61); /* fec010 */
+    --accent-600: oklch(0.7211 0.1556 70.65); /* e19100 */
+    --accent-700: oklch(0.5978 0.1406 59.32); /* bb6702 */
+    --accent-800: oklch(0.5054 0.1201 55.91); /* 974f09 */
+    --accent-900: oklch(0.4406 0.1019 55.9); /* 7c410b */
+    --accent-950: oklch(0.2971 0.0734 55.14); /* 482100 */
+
+    --neutral-50: oklch(1 0 0); /* ffffff */
+    --neutral-100: oklch(0.9521 0 0); /* efefef */
+    --neutral-200: oklch(0.8945 0 0); /* dcdcdc */
+    --neutral-300: oklch(0.7984 0 0); /* bdbdbd */
+    --neutral-400: oklch(0.6797 0 0); /* 989898 */
+    --neutral-500: oklch(0.5863 0 0); /* 7c7c7c */
+    --neutral-600: oklch(0.5068 0 0); /* 656565 */
+    --neutral-700: oklch(0.4386 0 0); /* 525252 */
+    --neutral-800: oklch(0.3942 0 0); /* 464646 */
+    --neutral-900: oklch(0.36 0 0); /* 3d3d3d */
+    --neutral-950: oklch(0.2809 0 0); /* 292929 */
+
+    --destructive: oklch(0.704 0.191 22.216);
+    --success: oklch(0.704 0.191 142.216);
+    --info: oklch(0.704 0.191 243.216);
+}
+
+@theme inline {
+    --breakpoint-xs: 24rem; /* 384px */
+    --breakpoint-lg-xl: 70rem; /* 1120px */
+    --breakpoint-md-lg: 56.25rem; /* 900px */
+
+    --font-albert-sans: var(--font-albert-sans);
+    --font-geist: var(--font-geist);
+
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    --color-background: var(--neutral-50);
+    --color-foreground: var(--neutral-950);
+    --color-scrollbar: var(--neutral-400);
+
+    --color-destructive: var(--destructive);
+    --color-success: var(--success);
+    --color-info: var(--info);
+
+    --color-primary-50: var(--primary-50);
+    --color-primary-100: var(--primary-100);
+    --color-primary-200: var(--primary-200);
+    --color-primary-300: var(--primary-300);
+    --color-primary-400: var(--primary-400);
+    --color-primary-500: var(--primary-500);
+    --color-primary-600: var(--primary-600);
+    --color-primary-700: var(--primary-700);
+    --color-primary-800: var(--primary-800);
+    --color-primary-900: var(--primary-900);
+    --color-primary-950: var(--primary-950);
+
+    --color-accent-50: var(--accent-50);
+    --color-accent-100: var(--accent-100);
+    --color-accent-200: var(--accent-200);
+    --color-accent-300: var(--accent-300);
+    --color-accent-400: var(--accent-400);
+    --color-accent-500: var(--accent-500);
+    --color-accent-600: var(--accent-600);
+    --color-accent-700: var(--accent-700);
+    --color-accent-800: var(--accent-800);
+    --color-accent-900: var(--accent-900);
+    --color-accent-950: var(--accent-950);
+
+    --color-neutral-50: var(--neutral-50);
+    --color-neutral-100: var(--neutral-100);
+    --color-neutral-200: var(--neutral-200);
+    --color-neutral-300: var(--neutral-300);
+    --color-neutral-400: var(--neutral-400);
+    --color-neutral-500: var(--neutral-500);
+    --color-neutral-600: var(--neutral-600);
+    --color-neutral-700: var(--neutral-700);
+    --color-neutral-800: var(--neutral-800);
+    --color-neutral-900: var(--neutral-900);
+    --color-neutral-950: var(--neutral-950);
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground overscroll-none;
+        font-synthesis-weight: none;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Webkit browsers (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar);
+        border-radius: 5px;
+    }
+
+    /* Firefox and other browsers */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-scrollbar) transparent;
+    }
+}
+
+@layer utilities {
+    /* Hide scrollbar completely while maintaining functionality */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
