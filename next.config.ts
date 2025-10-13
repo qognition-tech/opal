@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "opalconsulting.com.au",
+                hostname: "cms.opalconsulting.com.au",
             },
         ],
     },
