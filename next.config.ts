@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: "/api/wp/:path*",
-                destination: "https://cms.opalconsulting.com.au/wp-json/wp/v2/:path*",
+                destination: `${process.env.WORDPRESS_API_URL}/:path*`,
             },
         ];
     },
