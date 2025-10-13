@@ -24,21 +24,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { yoast_head_json } = migration;
 
     return {
-        title: yoast_head_json.title,
-        description: yoast_head_json.og_description,
+        title: yoast_head_json?.title || migration.title.rendered,
+        description: yoast_head_json?.og_description || "",
         openGraph: {
-            title: yoast_head_json.og_title,
-            description: yoast_head_json.og_description,
-            locale: yoast_head_json.og_locale,
-            siteName: yoast_head_json.schema["@graph"].find((item: { "@type": string }) => item["@type"] === "WebSite")
-                ?.name,
-            url: yoast_head_json.og_url,
+            title: yoast_head_json?.og_title || migration.title.rendered,
+            description: yoast_head_json?.og_description || "",
+            locale: yoast_head_json?.og_locale || "en_US",
+            siteName:
+                yoast_head_json?.schema?.["@graph"]?.find((item: { "@type": string }) => item["@type"] === "WebSite")
+                    ?.name || "Opal Consulting",
+            url: yoast_head_json?.og_url || migration.link,
             type: "article",
-            images: yoast_head_json.og_image?.map((image: OgImage) => ({
-                url: image.url,
-                width: image.width,
-                height: image.height,
-            })),
+            images:
+                yoast_head_json?.og_image?.map((image: OgImage) => ({
+                    url: image.url,
+                    width: image.width,
+                    height: image.height,
+                })) || [],
         },
     };
 }

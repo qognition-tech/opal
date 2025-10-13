@@ -167,14 +167,22 @@ export interface Cury {
 export type BlogResponse = Blog[];
 
 export async function getBlog(slug: string): Promise<BlogResponse> {
-    const response = await fetch(`https://opalconsulting.com.au/wp-json/wp/v2/blog?slug=${slug}&_embed`);
+    try {
+        const response = await fetch(`/api/wp/blog?slug=${slug}&_embed`, {
+            next: { revalidate: 300 }, // Revalidate every 5 minutes
+        });
 
-    if (!response.ok) {
-        throw new Error("Unable to fetch blog post.");
+        if (!response.ok) {
+            console.error(`Failed to fetch blog post: ${response.status} ${response.statusText}`);
+            return [];
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching blog post:", error);
+        return [];
     }
-
-    const data = await response.json();
-    return data;
 }
 
 export function useBlog(slug: string) {

@@ -167,14 +167,22 @@ export interface Cury {
 export type MigrationResponse = Migration[];
 
 export async function getMigration(slug: string): Promise<MigrationResponse> {
-    const response = await fetch(`https://opalconsulting.com.au/wp-json/wp/v2/migration?slug=${slug}&_embed`);
+    try {
+        const response = await fetch(`/api/wp/migration?slug=${slug}&_embed`, {
+            next: { revalidate: 300 }, // Revalidate every 5 minutes
+        });
 
-    if (!response.ok) {
-        throw new Error("Unable to fetch migration data.");
+        if (!response.ok) {
+            console.error(`Failed to fetch migration data: ${response.status} ${response.statusText}`);
+            return [];
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching migration data:", error);
+        return [];
     }
-
-    const data = await response.json();
-    return data;
 }
 
 export function useMigration(slug: string) {
