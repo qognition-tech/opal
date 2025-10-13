@@ -32,7 +32,7 @@ export interface Blog {
 export type BlogsResponse = Blog[];
 
 async function getBlogs({ count }: { count: number }): Promise<BlogsResponse> {
-    const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
+    const baseUrl = process.env.WORDPRESS_API_URL || "https://opalconsulting.com.au/wp-json/wp/v2";
     const response = await fetch(
         `${baseUrl}/blog?_embed&per_page=${count}&_fields=slug,modified_gmt,link,title,content,yoast_head_json,_links`,
         {
