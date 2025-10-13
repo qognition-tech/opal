@@ -168,7 +168,7 @@ export type BlogResponse = Blog[];
 
 export async function getBlog(slug: string): Promise<BlogResponse> {
     try {
-        const baseUrl = process.env.WORDPRESS_API_URL || "https://opalconsulting.com.au/wp-json/wp/v2";
+        const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
         const response = await fetch(`${baseUrl}/blog?slug=${slug}&_embed`, {
             next: { revalidate: 300 }, // Revalidate every 5 minutes
         });

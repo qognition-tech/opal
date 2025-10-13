@@ -168,7 +168,7 @@ export type EducationResponse = Education[];
 
 export async function getEducation(slug: string): Promise<EducationResponse> {
     try {
-        const baseUrl = process.env.WORDPRESS_API_URL || "https://opalconsulting.com.au/wp-json/wp/v2";
+        const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
         const url = `${baseUrl}/courseoffer?slug=${slug}&_embed`;
         console.log(`Fetching education from: ${url}`);
 
