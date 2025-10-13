@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
         // Send confirmation email to user
         const userEmailResult = await resend.emails.send({
-            from: "Opal Consulting <noreply@opalconsulting.com.au>",
+            from: "Opal Consulting <opalconsulting.com.au>",
             to: [email],
             subject: "Thank you for contacting Opal Consulting",
             react: UserConfirmationEmail({ firstName, fullName }),
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
 
         // Send notification email to admin
         const adminEmailResult = await resend.emails.send({
-            from: "Opal Consulting Contact Form <noreply@opalconsulting.com.au>",
+            from: "Opal Consulting Contact Form <opalconsulting.com.au>",
             to: ["info@opalconsulting.com.au"],
             replyTo: email,
             subject: `New Contact Form Submission from ${fullName}`,
