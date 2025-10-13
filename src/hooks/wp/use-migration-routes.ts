@@ -9,7 +9,10 @@ export interface MigrationRoute {
 export type MigrationRoutesResponse = MigrationRoute[];
 
 async function getMigrationRoutes(): Promise<MigrationRoutesResponse> {
-    const response = await fetch("/api/wp/migration?_fields=slug,title&per_page=100");
+    const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
+    const response = await fetch(`${baseUrl}/migration?_fields=slug,title&per_page=100`, {
+        next: { revalidate: 300 },
+    });
 
     if (!response.ok) {
         throw new Error("Unable to fetch migration routes.");

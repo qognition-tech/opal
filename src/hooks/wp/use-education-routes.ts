@@ -9,7 +9,10 @@ export interface EducationRoute {
 export type EducationRoutesResponse = EducationRoute[];
 
 async function getEducationRoutes(): Promise<EducationRoutesResponse> {
-    const response = await fetch("/api/wp/courseoffer?_fields=slug,title&per_page=100");
+    const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
+    const response = await fetch(`${baseUrl}/courseoffer?_fields=slug,title&per_page=100`, {
+        next: { revalidate: 300 },
+    });
 
     if (!response.ok) {
         throw new Error("Unable to fetch education routes.");

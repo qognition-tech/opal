@@ -168,7 +168,8 @@ export type MigrationResponse = Migration[];
 
 export async function getMigration(slug: string): Promise<MigrationResponse> {
     try {
-        const response = await fetch(`/api/wp/migration?slug=${slug}&_embed`, {
+        const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
+        const response = await fetch(`${baseUrl}/migration?slug=${slug}&_embed`, {
             next: { revalidate: 300 }, // Revalidate every 5 minutes
         });
 
