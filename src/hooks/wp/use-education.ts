@@ -169,16 +169,21 @@ export type EducationResponse = Education[];
 export async function getEducation(slug: string): Promise<EducationResponse> {
     try {
         const baseUrl = process.env.WORDPRESS_API_URL || "https://cms.opalconsulting.com.au/wp-json/wp/v2";
-        const response = await fetch(`${baseUrl}/courseoffer?slug=${slug}&_embed`, {
+        const url = `${baseUrl}/courseoffer?slug=${slug}&_embed`;
+        console.log(`Fetching education from: ${url}`);
+
+        const response = await fetch(url, {
             next: { revalidate: 300 }, // Revalidate every 5 minutes
         });
 
         if (!response.ok) {
             console.error(`Failed to fetch course offer: ${response.status} ${response.statusText}`);
+            console.error(`URL attempted: ${url}`);
             return [];
         }
 
         const data = await response.json();
+        console.log(`Successfully fetched education data, found ${data.length} results`);
         return data;
     } catch (error) {
         console.error("Error fetching course offer:", error);
