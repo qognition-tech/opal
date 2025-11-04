@@ -15,7 +15,7 @@ const STATS = [
         label: "Satisfied Clients",
     },
     {
-        value: "99%",
+        value: "93%",
         label: "Visa Success Rate",
     },
     {
