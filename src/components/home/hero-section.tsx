@@ -118,7 +118,7 @@ function HeroImage() {
             >
                 <div className="relative flex h-full w-full items-end">
                     <Image
-                        src="/images/hero-main-student.png"
+                        src="/images/hero-main-student-aus.png"
                         alt="hero-main-student"
                         width={1000}
                         height={1000}

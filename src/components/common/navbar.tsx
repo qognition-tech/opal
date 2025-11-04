@@ -65,6 +65,10 @@ const NAVLINKS: NavLink[] = [
         href: "/blogs",
     },
     {
+        label: "Testimonials",
+        href: "/testimonials",
+    },
+    {
         label: "About",
         href: "/about",
     },
@@ -174,8 +178,8 @@ export function Navbar() {
             <div className="flex w-full items-center justify-center bg-transparent p-4">
                 <motion.nav
                     className={cn(
-                        "relative mx-auto flex w-full max-w-7xl items-center justify-between px-4 transition-all duration-300",
-                        isScrolled ? "max-w-5xl rounded-full bg-neutral-50/80 drop-shadow-lg backdrop-blur-lg" : "",
+                        "relative mx-auto flex w-full max-w-[1500px] items-center justify-between px-4 transition-all duration-300",
+                        isScrolled ? "max-w-7xl rounded-full bg-neutral-50/80 drop-shadow-lg backdrop-blur-lg" : "",
                     )}
                     initial={false}
                     animate={{
@@ -193,12 +197,13 @@ export function Navbar() {
                         href="/"
                         className="focus:outline-none focus-visible:border-neutral-400 focus-visible:ring-2 focus-visible:ring-neutral-400/50 focus-visible:ring-offset-2"
                     >
-                        <Icons.Logo className="size-11" />
+                        <Icons.LogoFull className="h-10 max-[28rem]:h-6" />
+
                         <span className="sr-only">Opal Consulting - Home</span>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <NavigationMenu className="flex flex-1 max-[50rem]:hidden" viewport={false}>
+                    <NavigationMenu className="flex flex-1 max-xl:hidden" viewport={false}>
                         <NavigationMenuList>
                             {navlinks.map((item) =>
                                 item.submenu ? (
@@ -229,7 +234,7 @@ export function Navbar() {
                         href={ACTION_BUTTON.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex max-[50rem]:hidden"
+                        className="flex max-xl:hidden"
                     />
 
                     {/* Mobile Menu Toggle */}
@@ -322,7 +327,7 @@ function MenuToggleButton({ isOpen, onToggle }: MenuToggleButtonProps) {
         <Button
             variant="outline"
             size="lg"
-            className="hidden rounded-full px-4 max-[50rem]:flex"
+            className="hidden rounded-full px-4 max-xl:flex"
             onClick={onToggle}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
@@ -483,7 +488,7 @@ function MobileMenu({
                     transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className={cn(
                         "absolute top-[3.5rem] right-0 left-0 z-50 m-4 mx-0 max-h-[calc(100dvh-140px)]",
-                        "bg-primary-50 hidden flex-col gap-8 rounded-xl p-6 max-[50rem]:flex",
+                        "bg-primary-50 hidden flex-col gap-8 rounded-xl p-6 max-xl:flex",
                         isScrolled && "border border-neutral-100 drop-shadow-lg backdrop-blur-lg",
                     )}
                     onClick={(e) => {
