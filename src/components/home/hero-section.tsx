@@ -139,9 +139,23 @@ export function HeroSection({ className }: { className?: string }) {
                 className,
             )}
         >
-            <div className="md-lg:flex-row md-lg:pr-12 flex h-full w-full flex-col items-center justify-center rounded-2xl bg-[url('/images/stripe-background.svg')] bg-cover bg-center">
-                <HeroContent />
-                <HeroImage />
+            <div className="md-lg:flex-row md-lg:pr-12 relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-[url('/images/stripe-background.svg')] bg-cover bg-center">
+                {/* Australian Flag Background */}
+                <div className="absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <Image
+                        src="/images/flag-australia.jpg"
+                        alt="Australian Flag Background"
+                        fill
+                        priority
+                        className="object-cover opacity-45"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="md-lg:flex-row relative z-10 flex h-full w-full flex-col">
+                    <HeroContent />
+                    <HeroImage />
+                </div>
             </div>
         </section>
     );
