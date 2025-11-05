@@ -40,7 +40,6 @@ export function Footer() {
                 <div className="flex w-full flex-col items-start justify-between gap-10 max-md:items-center max-md:justify-center max-md:gap-20 md:flex-row">
                     <div className="flex flex-col items-start justify-start gap-4 text-left max-md:items-center max-md:justify-center max-md:text-center">
                         <div className="flex w-full items-center justify-between">
-                            <Icons.Logo className="size-20" />
                             <Link href="https://www.facebook.com/groups/1351565808361161" target="_blank">
                                 <Icons.Facebook className="size-10" />
                             </Link>
