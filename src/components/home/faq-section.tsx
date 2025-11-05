@@ -19,7 +19,7 @@ const FAQS = [
     },
     {
         question: "How long does a visa take?",
-        answer: "Depends on the visa. For example, a Subclass 400 work visa averages 3–4 weeks with ~90% approval.",
+        answer: "Depends on the visa. For example, a Subclass 400 work visa averages 3–4 weeks with high chances of approval.",
     },
     {
         question: "What if my visa is refused?",
