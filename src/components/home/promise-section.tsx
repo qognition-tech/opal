@@ -14,10 +14,7 @@ const STATS = [
         value: "1200+",
         label: "Satisfied Clients",
     },
-    {
-        value: "48Hrs",
-        label: "Approval Time",
-    },
+    
 ];
 
 const HIGHLIGHTS = [
