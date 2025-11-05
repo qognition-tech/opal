@@ -15,10 +15,6 @@ const STATS = [
         label: "Satisfied Clients",
     },
     {
-        value: "93%",
-        label: "Visa Success Rate",
-    },
-    {
         value: "48Hrs",
         label: "Approval Time",
     },
