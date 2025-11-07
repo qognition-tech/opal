@@ -10,6 +10,11 @@ export default function AboutPage() {
             <Navbar />
             <div className="flex w-full flex-col gap-4 pt-[132px]">
                 <Header title="About Opal Consulting" />
+                </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Opal Consulting | Registered Migration Agents Sydney</title>
+    <meta name="description" content="Learn about Opal Consulting — Sydney’s leading registered migration agency helping students, families, and professionals migrate to Australia.">
+    <link rel="canonical" href="https://www.opalconsulting.com.au/about">
                 <AboutBody />
             </div>
             <Footer />
