@@ -5,10 +5,13 @@ import { fontVariables } from "@/lib/fonts";
 import QueryProvider from "@/providers/query-provider";
 
 export const metadata: Metadata = {
-    title: "Opal Consulting | Registered Migration Agents Sydney",
-    description:
-        "Trusted registered migration agents in Australia with 12+ years experience. Expert visa consultation, application assistance, and migration services. Get professional guidance for your successful visa journey.",
-};
+   </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+    Client Testimonials | Opal Consulting Sydney
+    </title>
+    <meta name="description" content="See what our clients say about Opal Consulting. Trusted Sydney migration agency helping students and migrants achieve success.">
+    <link rel="canonical" href="https://www.opalconsulting.com.au/testimonials">
 
 export default function RootLayout({
     children,
