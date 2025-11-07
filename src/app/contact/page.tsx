@@ -50,6 +50,14 @@ export default function ContactPage() {
         <div className="flex min-h-screen w-full flex-col gap-4">
             <Navbar />
             <div className="flex w-full flex-col gap-4 pt-[132px]">
+                </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+    Contact Opal Consulting
+    </title>
+    <meta name="description" content="Contact our registered migration agents in Sydney today. Get expert visa advice and personalized support for your Australian migration journey.">
+    <meta name="keywords" content="Registered Migration Agents Sydney, migration agency sydney, immigration agent sydney. best migration agent sydney" />
+    <link rel="canonical" href="https://www.opalconsulting.com.au/contact">
                 <Header title="Contact Us" />
                 <ContactFormSection />
                 <ContactInfoSection contacts={CONTACTS} />
