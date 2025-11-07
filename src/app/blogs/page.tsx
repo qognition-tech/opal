@@ -15,6 +15,13 @@ export default function AllBlogsPage() {
             <Navbar />
             <div className="flex w-full flex-col gap-4 pt-[132px]">
                 <Header title="Blogs" />
+                </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+    Latest Blogs And Stories | Opal Consulting Sydney
+    </title>
+    <meta name="description" content="Read the latest blogs about migration, study tips, and visas in Australia. Insights from Sydney’s experienced migration agents.">
+    <link rel="canonical" href="https://www.opalconsulting.com.au/blogs">
                 <BlogsSection blogs={blogs} isLoading={isLoading} />
             </div>
             <Footer />
