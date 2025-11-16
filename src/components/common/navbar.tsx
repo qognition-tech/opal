@@ -229,35 +229,30 @@ export function Navbar() {
                     </NavigationMenu>
 
                     {/* Book a Consultation Button */}
-                    {/* <ActionButton
+                    <ActionButton
                         text={ACTION_BUTTON.text}
                         href={ACTION_BUTTON.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex max-xl:hidden"
-                    /> */}
+                    />
                     {/* Book a Consultation Button (Desktop) */}
-<ActionButton
-  text={ACTION_BUTTON.text}
-  href={ACTION_BUTTON.href}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden sm:flex rounded-full text-base px-6 py-3 font-semibold bg-primary-600 text-white hover:bg-primary-700 transition-all ml-auto"
-/>
+                    {/* <ActionButton
+                        text={ACTION_BUTTON.text}
+                        href={ACTION_BUTTON.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    /> */}
 
-{/* Mobile “Book a Consultation” Button */}
-<Link
-  href={ACTION_BUTTON.href}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex sm:hidden items-center justify-center px-5 py-3 rounded-full bg-primary-600 text-white font-semibold text-lg shadow-md hover:bg-primary-700 transition-all ml-auto"
->
-  Book a Consultation
-</Link>
-
-{/* Mobile Menu Toggle */}
-<MenuToggleButton isOpen={isMobileMenuOpen} onToggle={toggleMobileMenu} />
-
+                    {/* Mobile “Book a Consultation” Button */}
+                    {/* <Link
+                        href={ACTION_BUTTON.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-primary-600 hover:bg-primary-700 ml-auto flex items-center justify-center rounded-full px-5 py-3 text-lg font-semibold text-white shadow-md transition-all sm:hidden"
+                    >
+                        Book a Consultation
+                    </Link> */}
 
                     {/* Mobile Menu Toggle */}
                     <MenuToggleButton isOpen={isMobileMenuOpen} onToggle={toggleMobileMenu} />
