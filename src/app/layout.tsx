@@ -7,9 +7,10 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
     title: "Client Testimonials | Opal Consulting Sydney",
-    description: "See what our clients say about Opal Consulting. Trusted Sydney migration agency helping students and migrants achieve success.",
+    description:
+        "See what our clients say about Opal Consulting. Trusted Sydney migration agency helping students and migrants achieve success.",
     alternates: {
-        canonical: "https://www.opalconsulting.com.au/testimonials"
+        canonical: "https://www.opalconsulting.com.au/testimonials",
     },
 };
 
