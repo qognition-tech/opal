@@ -9,7 +9,10 @@ export const metadata: Metadata = {
     description: "See what our clients say about Opal Consulting. Trusted Sydney migration agency helping students and migrants achieve success.",
     alternates: {
         canonical: "https://www.opalconsulting.com.au/testimonials"
-    }
+    },
+    other: {
+        "google-site-verification": "mId-rVF0FuaY1mtL2gL29aTkyp6Y9emhHh6mCR3OnbU",
+    },
 };
 
 export default function RootLayout({
