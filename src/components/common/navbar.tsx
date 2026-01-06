@@ -22,6 +22,7 @@ import {
 import { useEducationRoutes } from "@/hooks/wp/use-education-routes";
 import { useMigrationRoutes } from "@/hooks/wp/use-migration-routes";
 import { Skeleton } from "../ui/skeleton";
+import { ActionButtonNav } from "../ui/action-button-nav";
 
 // Animation variants
 const menuButtonVariants = {
@@ -79,7 +80,7 @@ const NAVLINKS: NavLink[] = [
 ];
 
 const ACTION_BUTTON = {
-    text: "Book a Consultation",
+    text: "Book Now",
     href: "https://cal.com/opalconsulting?theme=light",
 };
 
@@ -229,12 +230,17 @@ export function Navbar() {
                     </NavigationMenu>
 
                     {/* Book a Consultation Button */}
-                    <ActionButton
-                        text={ACTION_BUTTON.text}
-                        href={ACTION_BUTTON.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex max-xl:hidden"
+                    <ActionButtonNav
+                    text={ACTION_BUTTON.text}
+                    href={ACTION_BUTTON.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                        px-3 py-1.5 text-xs
+                        sm:px-4 sm:py-2 sm:text-sm
+                        xl:text-base
+                        xl:px-6 xl:py-3
+                    "
                     />
 
                     {/* Mobile Menu Toggle */}
@@ -332,7 +338,7 @@ function MenuToggleButton({ isOpen, onToggle }: MenuToggleButtonProps) {
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
         >
-            <span className="text-base leading-[1.1em] tracking-[-0.5px]">Menu</span>
+            {/* <span className="text-base leading-[1.1em] tracking-[-0.5px]">Menu</span> */}
             <div className="relative size-6">
                 <motion.div
                     initial={false}
