@@ -5,13 +5,26 @@ import { fontVariables } from "@/lib/fonts";
 import QueryProvider from "@/providers/query-provider";
 
 export const metadata: Metadata = {
-   </script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>
-    Client Testimonials | Opal Consulting Sydney
-    </title>
-    <meta name="description" content="See what our clients say about Opal Consulting. Trusted Sydney migration agency helping students and migrants achieve success.">
-    <link rel="canonical" href="https://www.opalconsulting.com.au/testimonials">
+    title: {
+        default: "Opal Consulting | Registered Migration Agents Sydney",
+        template: "%s | Opal Consulting",
+    },
+    description:
+        "Expert migration services in Sydney. Trusted registered migration agents helping students, families, and professionals with Australian visas since 2008.",
+    keywords: [
+        "Registered Migration Agents Sydney",
+        "migration agency sydney",
+        "immigration agent sydney",
+        "best migration agent sydney",
+    ],
+    authors: [{ name: "Opal Consulting" }],
+    openGraph: {
+        type: "website",
+        locale: "en_AU",
+        url: "https://www.opalconsulting.com.au",
+        siteName: "Opal Consulting",
+    },
+};
 
 export default function RootLayout({
     children,
