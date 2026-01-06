@@ -230,16 +230,11 @@ export function Navbar() {
 
                     {/* Book a Consultation Button */}
                     <ActionButtonNav
-                    text={ACTION_BUTTON.text}
-                    href={ACTION_BUTTON.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                        px-3 py-1.5 text-xs
-                        sm:px-4 sm:py-2 sm:text-sm
-                        xl:text-base
-                        xl:px-6 xl:py-3
-                    "
+                        text={ACTION_BUTTON.text}
+                        href={ACTION_BUTTON.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm xl:px-6 xl:py-3 xl:text-base"
                     />
 
                     {/* Mobile Menu Toggle */}
