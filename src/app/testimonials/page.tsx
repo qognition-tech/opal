@@ -30,11 +30,6 @@ function TestimonialsSection() {
 
     const testimonials = data?.reviews || [];
     const displayedTestimonials = testimonials.slice(0, displayCount);
-    const hasMore = displayCount < testimonials.length;
-
-    const handleLoadMore = () => {
-        setDisplayCount((prev) => prev + 6);
-    };
 
     return (
         <SectionContainer className="sm:px-6 md:px-6 xl:px-10">
