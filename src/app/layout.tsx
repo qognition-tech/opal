@@ -22,12 +22,7 @@ export const metadata: Metadata = {
     verification: {
         google: "mId-rVF0FuaY1mtL2gL29aTkyp6Y9emhHh6mCR3OnbU",
     },
-    openGraph: {
-        type: "website",
-        locale: "en_AU",
-        url: "https://www.opalconsulting.com.au",
-        siteName: "Opal Consulting",
-    },
+    
 };
 
 export default function RootLayout({
