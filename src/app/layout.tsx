@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         template: "%s | Opal Consulting",
     },
     description:
-        "Expert migration services in Sydney. Trusted registered migration agents helping students, families, and professionals with Australian visas since 2008.",
+        "Expert migration services in Australia. Trusted registered migration agents helping students, families, and professionals with Australian visas since 2008.",
     keywords: [
         "Registered Migration Agents Sydney",
         "migration agency sydney",
