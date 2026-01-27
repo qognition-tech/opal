@@ -54,6 +54,8 @@ export default function RootLayout({
                 suppressHydrationWarning
                 className={cn("bg-background text-foreground font-geist min-h-screen antialiased", fontVariables)}
             >
+                {/* BUSINESS SCHEMA (LOADS ONCE) */}
+        <OpalConsultingSchema />
                 <noscript>
                     <iframe
                         src="https://www.googletagmanager.com/ns.html?id=GTM-58WP43Q"
