@@ -4,14 +4,15 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { fontVariables } from "@/lib/fonts";
 import QueryProvider from "@/providers/query-provider";
+import OpalConsultingSchema from "@/components/OpalConsultingSchema";
 
 export const metadata: Metadata = {
     title: {
-        default: "Opal Consulting | Registered Migration Agents Sydney",
+        default: "Opal Consulting: Best Migration Agents in Sydney",
         template: "%s | Opal Consulting",
     },
     description:
-        "Expert migration services in Australia. Trusted registered migration agents helping students, families, and professionals with Australian visas since 2008.",
+        "Opal Consulting is the leading migration agent providing expert Australian migration, visa & education services. 15+ years experience, 1200+ success stories.",
     keywords: [
         "Registered Migration Agents Sydney",
         "migration agency sydney",
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
     verification: {
         google: "mId-rVF0FuaY1mtL2gL29aTkyp6Y9emhHh6mCR3OnbU",
     },
+    alternates: {
+    canonical: "https://www.opalconsulting.com.au/",
+  },
     openGraph: {
         type: "website",
         locale: "en_AU",
