@@ -10,6 +10,18 @@ export const metadata: Metadata = {
         default: "Opal Consulting | Registered Migration Agents Sydney",
         template: "%s | Opal Consulting",
     },
+    description:
+        "Expert migration services in Sydney. Trusted registered migration agents helping students, families, and professionals with Australian visas since 2008.",
+    keywords: [
+        "Registered Migration Agents Sydney",
+        "migration agency sydney",
+        "immigration agent sydney",
+        "best migration agent sydney",
+    ],
+    authors: [{ name: "Opal Consulting" }],
+    verification: {
+        google: "mId-rVF0FuaY1mtL2gL29aTkyp6Y9emhHh6mCR3OnbU",
+    },
     
 };
 
